@@ -3,7 +3,7 @@
 Summary:	Convert-ASN1 perl module
 Summary(pl):	Modu³ perla Convert-ASN1
 Name:		perl-Convert-ASN1
-Version:	0.12
+Version:	0.13
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -11,7 +11,7 @@ Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Convert/Convert-ASN1-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl >= 5.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
