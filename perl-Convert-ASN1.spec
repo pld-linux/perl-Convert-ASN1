@@ -1,13 +1,12 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Convert
 %define	pnam	ASN1
 %define		_noautoreq "perl(Convert::ASN1::Debug)" "perl(Convert::ASN1::IO)" "perl(Convert::ASN1::_decode)" "perl(Convert::ASN1::_encode)"
-%include	/usr/lib/rpm/macros.perl
 Summary:	Convert-ASN1 perl module
 Summary(pl):	Modu³ perla Convert-ASN1
 Name:		perl-Convert-ASN1
 Version:	0.14
-Release:	5
-
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -37,7 +36,7 @@ Convert::ASN1 parsuje opisy ASN.1 i koduje/dekoduje do perlowych
 struktur danych u¿ywaj±c hierarchii referencji.
 
 %prep
-%setup -q -n Convert-ASN1-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
