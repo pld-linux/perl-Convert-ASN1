@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Convert
-%define	pnam	ASN1
+%define		pdir	Convert
+%define		pnam	ASN1
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
 Summary(pl):	Convert::ASN1 - biblioteka koduj±ca/rozkodowuj±ca ASN.1
 Name:		perl-Convert-ASN1
