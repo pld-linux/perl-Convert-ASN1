@@ -4,7 +4,7 @@ Summary:	Convert-ASN1 perl module
 Summary(pl):	Modu³ perla Convert-ASN1
 Name:		perl-Convert-ASN1
 Version:	0.14
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -18,12 +18,22 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 I consider Convert::ASN1 a replacement for my earlier Convert::BER
 module. While ASN1.pm is not as flexable as BER.pm, because PDUs must
-be described up fronta, it is also more powerful.  For example an LDAP
+be described up fronta, it is also more powerful. For example an LDAP
 filter is a recursive structure, BER.pm cannot encode or decode this in
 a single pass, ASN1.pm can.
 
 Convert::ASN1 will parse ASN.1 descriptions and will encode from and
 decode to perl data structures using a hierarchy of references.
+
+%description -l pl
+Convert::ASN1 ma byæ zamiennikiem wcze¶niejszego Convert::BER tego
+samego autora. ASN1.pm nie jest tak elastyczny jak BER.pm, poniewa¿
+PDU musz± byæ opisane, jest bardziej u¿yteczny. Na przyk³ad filtr LDAP
+jest struktur± rekurencyjn±, BER.pm nie mo¿e kodowaæ ani dekodowaæ
+takiej w jednym przebiegu, ASN1.pm mo¿e.
+
+Convert::ASN1 parsuje opisy ASN.1 i koduje/dekoduje do perlowych
+struktur danych u¿ywaj±c hierarchii referencji.
 
 %prep
 %setup -q -n Convert-ASN1-%{version}
