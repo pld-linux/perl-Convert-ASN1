@@ -41,7 +41,7 @@ struktur danych u¿ywaj±c hierarchii referencji.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
