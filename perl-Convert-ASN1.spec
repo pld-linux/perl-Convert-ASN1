@@ -1,7 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Convert
 %define	pnam	ASN1
-%define		_noautoreq "perl(Convert::ASN1::Debug)" "perl(Convert::ASN1::IO)" "perl(Convert::ASN1::_decode)" "perl(Convert::ASN1::_encode)"
 Summary:	Convert::ASN1 perl module
 Summary(pl):	Modu³ perla Convert::ASN1
 Name:		perl-Convert-ASN1
@@ -15,6 +14,8 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq 'perl(Convert::ASN1::Debug)' 'perl(Convert::ASN1::IO)' 'perl(Convert::ASN1::_decode)' 'perl(Convert::ASN1::_encode)'
 
 %description
 I consider Convert::ASN1 a replacement for my earlier Convert::BER
@@ -47,7 +48,8 @@ struktur danych u¿ywaj±c hierarchii referencji.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
