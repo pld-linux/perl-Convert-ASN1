@@ -3,7 +3,7 @@
 Summary:	Convert-ASN1 perl module
 Summary(pl):	Modu³ perla Convert-ASN1
 Name:		perl-Convert-ASN1
-Version:	0.13
+Version:	0.14
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
