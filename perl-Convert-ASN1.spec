@@ -39,7 +39,7 @@ struktur danych u¿ywaj±c hierarchii referencji.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
