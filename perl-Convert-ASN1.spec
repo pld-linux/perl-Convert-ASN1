@@ -2,8 +2,8 @@
 %define	pdir	Convert
 %define	pnam	ASN1
 %define		_noautoreq "perl(Convert::ASN1::Debug)" "perl(Convert::ASN1::IO)" "perl(Convert::ASN1::_decode)" "perl(Convert::ASN1::_encode)"
-Summary:	Convert-ASN1 perl module
-Summary(pl):	Modu³ perla Convert-ASN1
+Summary:	Convert::ASN1 perl module
+Summary(pl):	Modu³ perla Convert::ASN1
 Name:		perl-Convert-ASN1
 Version:	0.14
 Release:	6
