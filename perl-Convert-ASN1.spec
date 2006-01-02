@@ -4,13 +4,13 @@
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
 Summary(pl):	Convert::ASN1 - biblioteka koduj±ca/rozkodowuj±ca ASN.1
 Name:		perl-Convert-ASN1
-Version:	0.18
-Release:	2
+Version:	0.19
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4fab81d2d3e4a5338df0872cfda8513c
+# Source0-md5:	6debb08ccac684a199c0afe54fad51a5
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 I consider Convert::ASN1 a replacement for my earlier Convert::BER
 module. While ASN1.pm is not as flexable as BER.pm, because PDUs must
-be described up fronta, it is also more powerful. For example an LDAP
+be described up front, it is also more powerful. For example an LDAP
 filter is a recursive structure, BER.pm cannot encode or decode this
 in a single pass, ASN1.pm can.
 
@@ -49,8 +49,11 @@ struktur danych u¿ywaj±c hierarchii referencji.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Convert/ASN1/.packlist
+rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Convert/ASN1.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
