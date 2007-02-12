@@ -2,7 +2,7 @@
 %define		pdir	Convert
 %define		pnam	ASN1
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
-Summary(pl):	Convert::ASN1 - biblioteka koduj±ca/rozkodowuj±ca ASN.1
+Summary(pl.UTF-8):   Convert::ASN1 - biblioteka kodujÄ…ca/rozkodowujÄ…ca ASN.1
 Name:		perl-Convert-ASN1
 Version:	0.20
 Release:	1
@@ -29,15 +29,15 @@ in a single pass, ASN1.pm can.
 Convert::ASN1 will parse ASN.1 descriptions and will encode from and
 decode to perl data structures using a hierarchy of references.
 
-%description -l pl
-Convert::ASN1 ma byæ zamiennikiem wcze¶niejszego Convert::BER tego
-samego autora. ASN1.pm nie jest tak elastyczny jak BER.pm, poniewa¿
-PDU musz± byæ opisane, jest bardziej u¿yteczny. Na przyk³ad filtr LDAP
-jest struktur± rekurencyjn±, BER.pm nie mo¿e kodowaæ ani dekodowaæ
-takiej w jednym przebiegu, ASN1.pm mo¿e.
+%description -l pl.UTF-8
+Convert::ASN1 ma byÄ‡ zamiennikiem wczeÅ›niejszego Convert::BER tego
+samego autora. ASN1.pm nie jest tak elastyczny jak BER.pm, poniewaÅ¼
+PDU muszÄ… byÄ‡ opisane, jest bardziej uÅ¼yteczny. Na przykÅ‚ad filtr LDAP
+jest strukturÄ… rekurencyjnÄ…, BER.pm nie moÅ¼e kodowaÄ‡ ani dekodowaÄ‡
+takiej w jednym przebiegu, ASN1.pm moÅ¼e.
 
 Convert::ASN1 parsuje opisy ASN.1 i koduje/dekoduje do perlowych
-struktur danych u¿ywaj±c hierarchii referencji.
+struktur danych uÅ¼ywajÄ…c hierarchii referencji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
