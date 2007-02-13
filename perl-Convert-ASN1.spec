@@ -2,7 +2,7 @@
 %define		pdir	Convert
 %define		pnam	ASN1
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
-Summary(pl.UTF-8):   Convert::ASN1 - biblioteka kodująca/rozkodowująca ASN.1
+Summary(pl.UTF-8):	Convert::ASN1 - biblioteka kodująca/rozkodowująca ASN.1
 Name:		perl-Convert-ASN1
 Version:	0.20
 Release:	1
