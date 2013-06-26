@@ -1,23 +1,33 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Convert
 %define		pnam	ASN1
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
 Summary(pl.UTF-8):	Convert::ASN1 - biblioteka kodująca/rozkodowująca ASN.1
 Name:		perl-Convert-ASN1
-Version:	0.22
+Version:	0.26
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	64a555e44adc79d92072b9fc7a6779c4
+Source0:	http://www.cpan.org/modules/by-module/Convert/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	1c846c8c1125e6a075444abe65d99b63
 URL:		http://search.cpan.org/dist/Convert-ASN1/
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.636
+%if %{with tests}
+BuildRequires:	perl-Math-BigInt >= 1.997
+BuildRequires:	perl-Test-Simple >= 0.90
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq 'perl(Convert::ASN1::Debug)' 'perl(Convert::ASN1::IO)' 'perl(Convert::ASN1::_decode)' 'perl(Convert::ASN1::_encode)'
+%define		_noautoreq_perl	Convert::ASN1::Debug Convert::ASN1::IO Convert::ASN1::_decode Convert::ASN1::_encode
 
 %description
 I consider Convert::ASN1 a replacement for my earlier Convert::BER
@@ -53,16 +63,18 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Convert/ASN1.pod
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Convert/ASN1/.packlist
-rm -f $RPM_BUILD_ROOT%{perl_vendorlib}/Convert/ASN1.pod
+
+%{?with_tests:%{__make} test}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc ChangeLog README.md
 %dir %{perl_vendorlib}/Convert/ASN1
 %{perl_vendorlib}/Convert/ASN1/*.pm
 %{perl_vendorlib}/Convert/ASN1.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Convert::ASN1*.3pm*
