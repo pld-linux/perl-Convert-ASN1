@@ -14,11 +14,11 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Convert/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	80425835020da77c48c05a40e25bbf7e
-URL:		http://search.cpan.org/dist/Convert-ASN1/
+URL:		https://metacpan.org/dist/Convert-ASN1
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	rpmbuild(macros) >= 1.636
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Math-BigInt >= 1.997
 BuildRequires:	perl-Test-Simple >= 0.90
