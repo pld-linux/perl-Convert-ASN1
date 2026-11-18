@@ -7,13 +7,13 @@
 Summary:	Convert::ASN1 - ASN.1 encode/decode library
 Summary(pl.UTF-8):	Convert::ASN1 - biblioteka kodująca/rozkodowująca ASN.1
 Name:		perl-Convert-ASN1
-Version:	0.34
+Version:	0.36
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Convert/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cca63088fdd5c3665a2119ee29133f6a
+Source0:	https://www.cpan.org/modules/by-authors/id/T/TI/TIMLEGGE/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	6ef18d8812c89e6c998f84fe386a8785
 URL:		https://metacpan.org/dist/Convert-ASN1
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.0
